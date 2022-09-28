@@ -1,0 +1,83 @@
+Source: coinutils
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Section: science
+Priority: optional
+Build-Depends: debhelper-compat (= 10),
+               doxygen,
+               graphviz,
+               liblapack-dev,
+               libbz2-dev,
+               zlib1g-dev,
+               gfortran
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/science-team/coinutils
+Vcs-Git: https://salsa.debian.org/science-team/coinutils.git
+Homepage: https://projects.coin-or.org/CoinUtils
+
+Package: coinor-libcoinutils3v5
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Conflicts: coinor-libcoinutils3,
+           libcoinutils3
+Provides: libcoinutils3
+Replaces: coinor-libcoinutils3,
+          libcoinutils3
+Multi-Arch: same
+Description: Coin-or collection of utility classes (binaries and libraries)
+ CoinUtils (Coin-or Utilities) is a collection of classes and functions
+ that are generally useful to more than one COIN-OR project.  These include
+ classes for vectors, matrices, mps file reading, and functions for
+ floating-point comparisons.
+ .
+ The Computational Infrastructure for Operations Research (COIN-OR, or simply
+ COIN) project is an initiative to spur the development of open source software
+ for the operations research community.
+ .
+ This package contains the binaries and libraries.
+
+Package: coinor-libcoinutils-dev
+Architecture: any
+Section: libdevel
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         coinor-libcoinutils3v5 (= ${binary:Version}),
+         liblapack-dev,
+         libbz2-dev
+Conflicts: libcoinutils-dev
+Provides: libcoinutils-dev
+Replaces: libcoinutils-dev
+Multi-Arch: same
+Description: Coin-or collection of utility classes (developer files)
+ CoinUtils (Coin-or Utilities) is a collection of classes and functions
+ that are generally useful to more than one COIN-OR project.  These include
+ classes for vectors, matrices, mps file reading, and functions for
+ floating-point comparisons.
+ .
+ The Computational Infrastructure for Operations Research (COIN-OR, or simply
+ COIN) project is an initiative to spur the development of open source software
+ for the operations research community.
+ .
+ This package contains the header files for developers.
+
+Package: coinor-libcoinutils-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends},
+         libjs-jquery
+Recommends: coinor-libcoinutils-dev
+Conflicts: libcoinutils-doc
+Provides: libcoinutils-doc
+Replaces: libcoinutils-doc
+Multi-Arch: foreign
+Description: Coin-or collection of utility classes (documentation)
+ CoinUtils (Coin-or Utilities) is a collection of classes and functions
+ that are generally useful to more than one COIN-OR project.  These include
+ classes for vectors, matrices, mps file reading, and functions for
+ floating-point comparisons.
+ .
+ The Computational Infrastructure for Operations Research (COIN-OR, or simply
+ COIN) project is an initiative to spur the development of open source software
+ for the operations research community.
+ .
+ This package contains the documentation.

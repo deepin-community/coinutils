@@ -1,0 +1,295 @@
+coinutils (2.11.4+repack1-2) unstable; urgency=low
+
+  * QA upload.
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints.
+    + coinor-libcoinutils3v5: Add Multi-Arch: same.
+    + coinor-libcoinutils-dev: Add Multi-Arch: same.
+    + coinor-libcoinutils-doc: Add Multi-Arch: foreign.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Fri, 20 Aug 2021 14:07:59 +0100
+
+coinutils (2.11.4+repack1-1) unstable; urgency=medium
+
+  * QA upload.
+  * New upstream version 2.11.4+repack1
+  * Update Standards-Version to 4.5.0
+  * Use source created jquery.js in *.doc package
+  * Change to usr/share/coin/Data/Sample in d/coinor-libcoinutils-dev.install
+    and clean up d/rules
+  * Set upstream metadata fields: Bug-Database, Repository, Repository-Browse
+    Update: Bug-Submit.
+  * d/copyright Readd BuildTools from upstream source
+  * Build using autoreconf, make use of upstream BuildTools.
+
+ -- Håvard Flaget Aasen <haavard_aasen@yahoo.no>  Thu, 06 Feb 2020 21:26:20 +0100
+
+coinutils (2.11.3+repack1-1) unstable; urgency=medium
+
+  * QA upload
+  [ Debian Janitor ]
+  * Drop use of autotools-dev debhelper.
+  * Update standards version to 4.4.1, no changes needed.
+  * Set upstream metadata fields: Bug-Submit.
+  * Fix day-of-week for changelog entries 2.9.4-1.
+  * Use secure URI in debian/watch.
+
+  [ Håvard Flaget Aasen ]
+  * New upstream version 2.11.3+repack1
+  * Remove autotools-dev as build-dependency
+  * Remove debian/compat, use debhelper-compat instead
+  * Update debian/watch.
+    - Add 'repack' in dversionmangle
+    - Use secure URI
+  * Update copyright.
+    - Exclude MSVisualStudio
+  * Shorten paths in debian/*.install files.
+  * Remove unused lintian-overrides
+  * In debian/rules
+    - Remove README file in wrong folder
+
+ -- Håvard Flaget Aasen <haavard_aasen@yahoo.no>  Thu, 19 Dec 2019 20:08:10 +0100
+
+coinutils (2.10.14+repack1-2) unstable; urgency=medium
+
+  * QA upload
+
+  [ Jelmer Vernooĳ ]
+  * Change priority extra to priority optional.
+  * Trim trailing whitespace.
+
+  [ Anton Gladky ]
+  * [0b277a6] Set Standards-Version: 4.3.0. Update VCS-fields.
+  * [8c10505] Trim trailing whitespace.
+  * [d71b0c5] Orphan the package
+
+ -- Anton Gladky <gladk@debian.org>  Wed, 07 Aug 2019 21:02:24 +0200
+
+coinutils (2.10.14+repack1-1) unstable; urgency=medium
+
+  * [713cca4] Remove Miles Lubin from uploaders list. (Closes: #862821)
+  * [9225df3] Add libbz2-dev as a dependency of coinor-libcoinutils-dev.
+              (Closes: #838620)
+
+ -- Anton Gladky <gladk@debian.org>  Mon, 21 Aug 2017 21:22:04 +0200
+
+coinutils (2.10.14+repack1-1~exp1) experimental; urgency=medium
+
+  * [67873c4] New upstream version 2.10.14+repack1
+  * [e2529e5] Remove applied patch
+  * [3dec535] Set Standards-Version: 4.0.0
+
+ -- Anton Gladky <gladk@debian.org>  Sat, 19 Aug 2017 09:50:35 +0200
+
+coinutils (2.10.13+repack1-1~exp1) experimental; urgency=medium
+
+  * [c4d9e3e] Update d/watch.
+  * [387e09c] Remove BuildTools folder from source.
+  * [af17ca6] New upstream version 2.10.13+repack1
+  * [3cddbde] Refresh/remove patches.
+  * [0dda228] Switch to compat level 10.
+  * [4166a9f] Enable maximal hardening options.
+
+ -- Anton Gladky <gladk@debian.org>  Thu, 01 Jun 2017 22:38:00 +0200
+
+coinutils (2.9.15-4) unstable; urgency=medium
+
+  * [96b6446] Drop dbg-package.
+  * [7b20aff] Apply cme fix dpkg.
+  * [523795c] Add myself as uploader.
+
+ -- Anton Gladky <gladk@debian.org>  Tue, 06 Sep 2016 20:27:25 +0200
+
+coinutils (2.9.15-3.1) unstable; urgency=medium
+
+  * Non maintainer upload.
+  * Rename library packages for g++5 ABI transition. Addresses: #791008.
+
+ -- Matthias Klose <doko@debian.org>  Wed, 12 Aug 2015 00:35:45 +0200
+
+coinutils (2.9.15-3) unstable; urgency=medium
+
+  * Team upload.
+  * Add liblapack-dev for coinor-libcoinutils-dev to make sure -llapack
+    and -lblas exist as required in the pkgconfig file (Closes: #768753)
+
+ -- Aron Xu <aron@debian.org>  Thu, 13 Nov 2014 20:18:22 +0800
+
+coinutils (2.9.15-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add gfortran to B-D for lapack and blas support, thanks syq@d.o
+    (Closes: #766134)
+  * Allow parallel building
+
+ -- Aron Xu <aron@debian.org>  Thu, 30 Oct 2014 07:31:48 +0800
+
+coinutils (2.9.15-1) unstable; urgency=low
+
+  * New upstream version.
+  * Use dh_autotools-dev to update config.{sub,guess} for new ports.
+    - Closes: #731206
+    - Thanks to Adam Conrad
+  * Remove shlibdeps patch incorporated upstream with configure option.
+
+ -- Miles Lubin <miles.lubin@gmail.com>  Tue, 02 Sep 2014 20:50:57 -0400
+
+coinutils (2.9.10-1) unstable; urgency=low
+
+  * New upstream version.
+  * Bump standards version (no changes needed).
+  * Upload to unstable for transition.
+
+ -- Miles Lubin <miles.lubin@gmail.com>  Wed, 27 Nov 2013 21:43:02 -0500
+
+coinutils (2.9.4-2) experimental; urgency=low
+
+  * Update package descriptions from upstream.
+  * Purge license-incompatible files from previous maintainer.
+    - Update copyright file.
+  * Remove .la files. Reverse dependencies will be updated in experimental.
+  * Add patch to fix building with pkg-config.
+  * Patch to properly set shared library dependencies.
+
+ -- Miles Lubin <miles.lubin@gmail.com>  Wed, 25 Sep 2013 16:23:58 -0400
+
+coinutils (2.9.4-1) experimental; urgency=low
+
+  * New upstream version (Closes: #687262)
+    - License changed to EPL.
+    - SONAME version is now 3.
+  * New maintainer (Closes: #645077)
+  * Rewrite rules using dh.
+  * Bump to compat 9 (libraries now installed to multiarch dirs.).
+  * Add patch to fix format security.
+  * Bump standards version.
+    - Updated copyright file to machine-readable format.
+
+ -- Miles Lubin <miles.lubin@gmail.com>  Tue, 13 Aug 2013 00:05:08 -0400
+
+coinutils (2.6.4-3) unstable; urgency=high
+
+  * Remove libs from dependency_libs in libCoinUtils.la
+    (Closes: #585893, #587117, #587109, #587116)
+  * Bump standards version (No changes required).
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Fri, 02 Jul 2010 23:04:15 +0200
+
+coinutils (2.6.4-2) unstable; urgency=low
+
+  * Build with support for gzip/bzip2 (Closes: #585018).
+    - Build depend on libbz2-dev and zlib1g-dev
+    - Thanks to Jean-Christian de Rivaz for the patch
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Thu, 10 Jun 2010 10:45:32 +0200
+
+coinutils (2.6.4-1) unstable; urgency=low
+
+  * New upstream version (no changes).
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Thu, 27 May 2010 00:40:38 +0200
+
+coinutils (2.6.3-1) unstable; urgency=low
+
+  * New upstream version.
+    - Switch to dpkg-source 3.0 (quilt) format.
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Wed, 07 Apr 2010 11:59:11 +0200
+
+coinutils (2.6.2-1) unstable; urgency=low
+
+  * New upstream version (no changes).
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Fri, 12 Mar 2010 12:18:22 +0100
+
+coinutils (2.6.1-1) unstable; urgency=low
+
+  * New upstream version fixing installation of missing header file.
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Fri, 05 Mar 2010 07:29:53 +0100
+
+coinutils (2.6.0-2) unstable; urgency=low
+
+  * Install missing header file causing subsequent build failures.
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Fri, 26 Feb 2010 14:51:11 +0100
+
+coinutils (2.6.0-1) unstable; urgency=low
+
+  * New upstream version.
+  * Bump standards version (No changes required).
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Thu, 18 Feb 2010 16:11:41 +0100
+
+coinutils (2.5.1-1) unstable; urgency=low
+
+  [ Torsten Werner ]
+  * Remove myself from Uploaders as discussed with Sören.
+
+  [ Soeren Sonnenburg ]
+  * New upstream version.
+  * Refreshed patches.
+  * Bump standards version (No changes required).
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Wed, 14 Oct 2009 06:36:25 +0200
+
+coinutils (2.5.0-1) unstable; urgency=low
+
+  [ Soeren Sonnenburg ]
+  * New upstream version.
+  * Move -dbg package to section debug.
+
+  [ Aramian Wasielak ]
+  * debian/control:
+    - Remove ghostscript and texlive-latex-base from Build-Depends.
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Fri, 03 Apr 2009 08:05:13 +0200
+
+coinutils (2.4.0-1) unstable; urgency=low
+
+  [ Aramian Wasielak ]
+  * debian/control:
+    - Fix section override disparity.
+    - Fix Homepage field.
+  * Add lintian override.
+  * debian/rules (clean): Remove generated doxydoc/html.
+  * Update my email address to aramian.wasielak@gmail.com.
+
+  [ Soeren Sonnenburg ]
+  * New upstream version.
+  * Add ${misc:Depends} to all package dependencies.
+  * Update doxydoc.conf on build.
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Wed, 11 Feb 2009 08:32:24 +0100
+
+coinutils (2.3.3-2) unstable; urgency=low
+
+  * Fixed Vcs-Svn and Vcs-Browser fields.
+  * Fixed a typo in copyright.
+
+ -- Aramian Wasielak <aramian.wasielak@gmail.com>  Wed, 24 Sep 2008 22:50:18 +0200
+
+coinutils (2.3.3-1) unstable; urgency=low
+
+  * New upstream version.
+  * Rebase patches.
+  * Update my email address to sonne@debian.org.
+  * Prefix packages with coinor- to distinguish them from coin3d and to
+    underline that they are part of the coin-or project.
+  * Introduce README.source and patch target to make package compliant to
+    standards version 3.8.0.
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Wed, 24 Sep 2008 21:37:53 +0200
+
+coinutils (2.3.1-1) unstable; urgency=low
+
+  * new upstream release
+
+ -- Torsten Werner <twerner@debian.org>  Thu, 24 Jul 2008 21:01:28 +0200
+
+coinutils (2.2.5-1) unstable; urgency=low
+
+  * Initial Release  (Closes: #485858)
+
+ -- Soeren Sonnenburg <debian@nn7.de>  Thu, 12 Jun 2008 00:19:08 +0200

@@ -1,0 +1,9 @@
+Document: coinutils
+Title: coinutils API documentation
+Author: J.P Fasano, John J. Forrest, Lou Hafer, Laszlo Ladanyi, Francois Margot, Matt Saltzman, Ted Ralphs, Andreas Waechter
+Abstract: Doxygen-generated API documentation for coinutils.
+Section: Science/Mathematics
+
+Format: HTML
+Index: /usr/share/doc/coinor-libcoinutils-doc/html/index.html
+Files: /usr/share/doc/coinor-libcoinutils-doc/html/*.html

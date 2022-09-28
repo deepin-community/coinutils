@@ -1,0 +1,7 @@
+The new versions of packages should be uploaded in the following sequence:
+- coinutils
+- coinor-osi
+- clp
+- coinor-cgl
+- coinor-cbc
+- coinor-symphony
