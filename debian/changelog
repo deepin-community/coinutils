@@ -1,3 +1,9 @@
+coinutils (2.11.4+repack1-2deepin0) unstable; urgency=medium
+
+  * No source change upload against GCC 12.
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Thu, 19 Sep 2024 22:44:00 +0800
+
 coinutils (2.11.4+repack1-2) unstable; urgency=low
 
   * QA upload.
